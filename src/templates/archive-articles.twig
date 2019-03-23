@@ -1,0 +1,16 @@
+{% extends './layouts/base.twig' %}
+
+{% block content %}
+
+    {{ htmlWebpackPlugin.options.content }}
+
+    <p>This list is done with a loop in the Twig template:</p>
+    <ul>
+        {% for page in htmlWebpackPlugin.options.archives %}
+            <li>
+                <a href="{{ page.link }}">{{ page.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

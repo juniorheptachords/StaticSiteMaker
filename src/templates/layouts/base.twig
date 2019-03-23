@@ -1,0 +1,40 @@
+{% set lang = htmlWebpackPlugin.options.lang %}
+{% set urls = htmlWebpackPlugin.options.urls %}
+
+<!DOCTYPE html>
+<html lang="{{ htmlWebpackPlugin.options.lang_attribute }}">
+    <head>
+        <title>{{ htmlWebpackPlugin.options.meta_title }}</title>
+        <meta name="description" content="{{ htmlWebpackPlugin.options.meta_description }}" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="#000"/>
+        <link rel="manifest" href="{{ htmlWebpackPlugin.options.root_path }}manifest.json">
+
+    </head>
+
+    <body>
+        <header>
+            {% for language, value in htmlWebpackPlugin.options.current_page_languages %}
+                {% if language != lang %}
+                    <a href="{{ value.url }}">{{ language | title }}</a>
+                {% endif %}
+            {% endfor %}
+            
+            <a href="{{ urls.page.home[lang].url }}"
+               class="{% if urls.page.home[lang].isCurrent %} current {% endif %}">
+                {{ urls.page.home[lang].title }}
+            </a> 
+            <a href="{{ urls.page.articles[lang].url }}" 
+               class="{% if urls.page.articles[lang].isCurrent %} current {% endif %}">
+                {{ urls.page.articles[lang].title }}
+            </a> 
+            
+
+        </header>
+        
+        {% block content %}
+        {% endblock %}
+        
+    </body>
+</html>

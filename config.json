@@ -1,0 +1,18 @@
+{
+    "title": "Hello World",
+    "description": "A static site",
+    "pwa": {
+        "short_name": "Hello",
+        "background_color": "#000",
+        "theme_color": "#fff"
+    },
+    "post_types" : {
+        "article": {
+            "archive": "articles"
+        } 
+    },
+    "languages": {
+        "en": "en-CA",
+        "fr": "fr-CA"
+    }
+}

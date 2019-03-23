@@ -69,6 +69,9 @@ Every post can have an archive page. This page will provide a variable conataini
 ## Internationalization 
 When defining multiple languages you can link pages together.
 
-To link a page or a post in a secondary language to the main language, add this at the top of the ```.md``` file: ```[//]: # "Original: {filename}.md" ```
+To link a page or a post in a secondary language to the main language, add this at the top of the ```.md``` file: 
+```
+[//]: # "Original: {filename}.md"
+```
 ```{filename}.md``` is the filename of the post to link to in the main language.
 The main language is the one at the first position in the array of languages in ```config.json```.

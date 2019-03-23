@@ -4,7 +4,18 @@ The static site maker allows to generate a static site using Markdown files as d
 
 ## Getting started
 
-Coming soon...
+Download or clone this repository.
+
+Install npm modules:
+
+```npm install```
+
+To generate the static site run:
+
+```npm run build```
+
+This repository is ready to use, so if you run this command after cloning the project it will generate a Hello World site.
+
 
 ## How to use
 
